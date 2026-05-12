@@ -1,0 +1,13 @@
+import random
+import string
+
+def generar_contrasena(longitud=8):
+    caracteres = string.ascii_letters + string.digits + "!@#$%^&*"
+    contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
+    return contrasena
+
+# Programa principal
+print("=== Generador de Contraseñas Seguras ===")
+longitud = int(input("¿Qué longitud quieres para tu contraseña? (recomendado: 8-12): "))
+nueva_contrasena = generar_contrasena(longitud)
+print(f"\nTu nueva contraseña es: {nueva_contrasena}")
